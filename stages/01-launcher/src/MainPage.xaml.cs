@@ -367,10 +367,10 @@ namespace ShenmueLauncher
                 "Commitment: if SEGA, the Shenmue Production Committee, or Valve believe this project infringes any right, even unintentionally, please get in touch — it will be taken down or made private immediately, no questions asked.\n\n" +
                 "I'm just a fan who wants to play Shenmue on Xbox. And to extend that to others who, like me, own the original game and want to do the same. Nothing more than that.";
             var body = new StackPanel { Spacing = 16 };
-            body.Children.Add(new TextBlock { Text = pt, TextWrapping = TextWrapping.Wrap, FontSize = 13, IsTextSelectionEnabled = true });
-            body.Children.Add(new Windows.UI.Xaml.Shapes.Rectangle { Height = 1, Fill = (Brush)Resources["Muted"] });
             body.Children.Add(new TextBlock { Text = en, TextWrapping = TextWrapping.Wrap, FontSize = 13, IsTextSelectionEnabled = true });
-            var dlg = new ContentDialog { Title = "Sobre este projeto / About this project", Content = new ScrollViewer { Content = body, MaxHeight = 420, Width = 560 }, CloseButtonText = "Fechar / Close" };
+            body.Children.Add(new Windows.UI.Xaml.Shapes.Rectangle { Height = 1, Fill = (Brush)Resources["Muted"] });
+            body.Children.Add(new TextBlock { Text = pt, TextWrapping = TextWrapping.Wrap, FontSize = 13, IsTextSelectionEnabled = true });
+            var dlg = new ContentDialog { Title = "About this project / Sobre este projeto", Content = new ScrollViewer { Content = body, MaxHeight = 420, Width = 560 }, CloseButtonText = "Close / Fechar" };
             await dlg.ShowAsync();
         }
 
