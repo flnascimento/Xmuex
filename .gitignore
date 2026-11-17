@@ -1,0 +1,53 @@
+# Nada de jogo, binarios, saves, chaves ou credenciais no repositorio.
+
+# Jogo e binarios
+*.exe
+*.dll
+*.pak
+*.wav
+*.tac
+*.tad
+*.bin
+*.iso
+*.zip
+archives/
+game/
+
+# Build e pacotes
+bin/
+obj/
+out/
+.vs/
+AppPackages/
+*.appx
+*.msix
+*.log
+*.pdb
+*.ilk
+build.log
+**/src/native/
+
+# Certificado e segredos locais
+certs/
+*.pfx
+*.snk
+*.user
+secrets*
+credentials*
+.env
+
+# Mods de terceiros (baixados a parte) e pacote gerado por tools/import_mods.py
+mods-src/
+stages/05-mods/payload/
+
+# Imagens de disco e dados de jogo fornecidos pelo usuario
+*.cue
+*.img
+*.chd
+*.7z
+
+# Downloads em andamento do navegador
+*.crdownload
+*.part
+
+__pycache__/
