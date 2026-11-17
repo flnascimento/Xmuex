@@ -12,7 +12,7 @@ Este é um projeto pessoal, de fã, feito para rodar no meu próprio Xbox a minh
 
 **Sobre forks e cópias:** o código é aberto para transparência, não para virar ferramenta de pirataria. Não autorizo forks ou distribuições que removam, substituam ou contornem a verificação de posse feita pela própria Steam para liberar o acesso ao jogo — ver a condição adicional na `LICENSE`.
 
-Sou só um fã que quer jogar Shenmue no Xbox. Nada além disso.
+Sou só um fã que quer jogar Shenmue no Xbox. E estender isso a outros que, assim como eu, têm o jogo original e querem fazer o mesmo. Nada além disso.
 
 ---
 
@@ -30,4 +30,4 @@ This is a personal fan project, built to run my own legally purchased Steam copy
 
 **On forks and copies:** this code is open for transparency, not to become a piracy tool. I do not authorize forks or redistributions that remove, replace, or bypass the Steam-based ownership verification used to unlock access to the game — see the additional condition in `LICENSE`.
 
-I'm just a fan who wants to play Shenmue on Xbox. Nothing more than that.
+I'm just a fan who wants to play Shenmue on Xbox. And to extend that to others who, like me, own the original game and want to do the same. Nothing more than that.
