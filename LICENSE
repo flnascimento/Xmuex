@@ -22,6 +22,13 @@ SOFTWARE.
 
 ---
 
+Condicao adicional (nao-MIT): qualquer obra derivada deste codigo que baixe,
+instale ou conceda acesso ao jogo Shenmue deve manter a verificacao de posse
+feita pela propria Steam (login do usuario final, pela conta dele, sem
+contornar ou simular essa verificacao) como unico meio de obter os arquivos
+do jogo. Nao e autorizado remover, substituir ou burlar essa verificacao para
+viabilizar distribuicao nao autorizada do jogo. Ver `NOTICE.md`.
+
 Esta licenca cobre apenas o codigo deste repositorio (launcher, loader, shims,
 scripts). Nao cobre o jogo Shenmue (SEGA/Shenmue Production Committee), nem os
 mods de terceiros citados em `docs/MODS.md` — nenhum dos dois esta incluido

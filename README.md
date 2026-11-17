@@ -10,7 +10,7 @@ Um launcher UWP próprio baixa o jogo **direto da Steam, pela conta do usuário*
 - Download pinado por build/manifest e verificado por hash.
 - Mods de PC (widescreen, tradução, texturas) **não são distribuídos aqui** — ver `docs/MODS.md` para importar os seus.
 
-Ver `docs/LEGAL.md` para o raciocínio completo sobre direitos autorais.
+Ver `NOTICE.md` para a declaração de intenção e boa-fé (PT-BR/EN), e `docs/LEGAL.md` para o raciocínio completo sobre direitos autorais.
 
 ## Etapa atual
 Ver [STATUS.md](STATUS.md).
@@ -34,4 +34,4 @@ Ver `docs/DEPLOY.md`.
 Jogo: Shenmue I & II (Steam), appid 758330, depot 758332, build 3291213 (manifest 2953351546760814442).
 
 ## Licença
-Código deste repositório sob MIT (`LICENSE`). Não cobre o jogo nem os mods de terceiros.
+Código deste repositório sob MIT com uma condição adicional de uso responsável (`LICENSE`): forks não podem remover a verificação de posse feita pela própria Steam. Não cobre o jogo nem os mods de terceiros.
