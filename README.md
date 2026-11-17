@@ -1,8 +1,8 @@
 # Xmuex
 
-Port pessoal de **Shenmue I & II (Steam)** para **Xbox Series S|X em Modo de Desenvolvedor**, sem emulação: o Xbox já é Windows x64, então o `Shenmue.exe`/`Shenmue2.exe` original da Steam roda mapeado em memória por um loader de PE próprio, com shims que traduzem as chamadas Win32 que ele faz para as APIs disponíveis em UWP (janela, Direct3D 11, XInput, XAudio2). Nome: trocadilho entre **Xbox** e **Shenmue**.
+Port pessoal de **Shenmue I & II (Steam)** para **Xbox Series S|X em Modo de Desenvolvedor**, sem emulação: o Xbox já é Windows x64, então o `Shenmue.exe`/`Shenmue2.exe` original da Steam roda mapeado em memória por um loader de PE próprio (PE = *Portable Executable*, o formato dos `.exe`/`.dll` do Windows — o loader lê esse formato e carrega o executável na memória, do mesmo jeito que o Windows faz ao abrir um programa), com shims que traduzem as chamadas Win32 que ele faz para as APIs disponíveis em UWP (janela, Direct3D 11, XInput, XAudio2). Nome: trocadilho entre **Xbox** e **Shenmue**.
 
-Um launcher UWP próprio baixa o jogo **direto da Steam, pela conta do usuário** (login por QR code, sem senha salva) — ninguém precisa copiar arquivos por USB. Inspirado em [UWP-Spider-Launcher](https://github.com/BBCPrince/UWP-Spider-Launcher), que faz o mesmo para outro jogo.
+Um launcher UWP próprio baixa o jogo **direto da Steam, pela conta do usuário** (login por QR code, sem senha salva) — ninguém precisa, nem pode, copiar arquivos por USB.
 
 ## Regras
 - Nenhum arquivo do jogo, binário, save, certificado ou credencial entra neste repositório.
