@@ -1,0 +1,8 @@
+<Directives xmlns="http://schemas.microsoft.com/netfx/2013/01/metadata">
+  <!-- protobuf-net (via SteamKit2) serializa por reflexao em tempo de execucao; o compilador
+       .NET Native nao enxerga isso na analise estatica sem essa diretiva explicita. -->
+  <Application>
+    <Assembly Name="protobuf-net" Dynamic="Required All" />
+    <Assembly Name="SteamKit2" Dynamic="Required All" />
+  </Application>
+</Directives>

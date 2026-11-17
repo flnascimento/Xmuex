@@ -14,8 +14,10 @@ Gera `stages/01-launcher/out/Shenmue_<versao>.msix`.
 ## 2. Instalar
 1. Device Portal (`https://IP:11443`) → *My games & apps* → *Add*.
 2. Selecione o `.msix`. É atualização: o jogo já baixado em `LocalState\game` continua lá.
-3. Se pedir dependências, adicione os arquivos de `stages/01-launcher/out/ShenmueLauncher_<versao>_x64_Debug_Test/Dependencies/x64/`:
-   `Microsoft.NET.CoreRuntime.2.2.appx`, `Microsoft.NET.CoreFramework.Debug.2.2.appx`, `Microsoft.VCLibs.x64.Debug.14.00.appx`.
+3. Se pedir dependências, adicione os arquivos de `stages/01-launcher/out/ShenmueLauncher_<versao>_x64_Test/Dependencies/x64/`:
+   `Microsoft.NET.CoreRuntime.2.2.appx`, `Microsoft.NET.CoreFramework.Debug.2.2.appx`, `Microsoft.VCLibs.x64.14.00.appx`.
+
+   São componentes da própria Microsoft (parte do SDK/NuGet `Microsoft.NETCore.UniversalWindowsPlatform`, usados por qualquer app UWP em C# feito para rodar fora da Store), não deste projeto — vêm junto do pacote de build na pasta `Dependencies/x64` e também nas Releases deste repositório. Mesmo compilando em Release, a dependência `.Debug` do framework .NET persiste porque este app executa via CoreCLR/JIT (não compilado nativamente), e só por isso o Windows exige o dispositivo em Modo de Desenvolvedor/sideload liberado para instalar — o mesmo cenário em que o Xbox já está. Não existe link oficial de download avulso da Microsoft para esses três arquivos fora do SDK/NuGet.
 
 O console mostra um só tile, **Shenmue Launcher**. O app do jogo fica oculto e é aberto pelo botão JOGAR.
 

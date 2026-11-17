@@ -37,6 +37,23 @@
     <ErrorReport>prompt</ErrorReport>
     <Prefer32Bit>true</Prefer32Bit>
   </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <PlatformTarget>x64</PlatformTarget>
+    <DebugSymbols>false</DebugSymbols>
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+    <!-- .NET Native (AOT) daria um pacote sem dependencia de framework CoreCLR, mas o compilador
+         2.2.12 tem um erro interno real com o serializador de enums do protobuf-net (via SteamKit2),
+         mesmo com a diretiva em Properties/Default.rd.xml. Sem solucao pratica sem trocar SteamKit2/
+         protobuf-net (risco de regressao no login/download, ja testados). Mantido JIT (CoreCLR). -->
+    <UseDotNetNativeToolchain>false</UseDotNetNativeToolchain>
+  </PropertyGroup>
   <ItemGroup>
     <Compile Include="SteamSession.cs" />
     <Compile Include="App.xaml.cs"><DependentUpon>App.xaml</DependentUpon></Compile>
@@ -46,6 +63,9 @@
     <AppxManifest Include="Package.appxmanifest"><SubType>Designer</SubType></AppxManifest>
     <Content Include="Assets\*.png" />
     <Content Include="native\*.dll;native\*.exe"><Link>%(Filename)%(Extension)</Link><CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory></Content>
+  </ItemGroup>
+  <ItemGroup>
+    <RdXmlFile Include="Properties\Default.rd.xml" />
   </ItemGroup>
   <ItemGroup>
     <ApplicationDefinition Include="App.xaml"><Generator>MSBuild:Compile</Generator><SubType>Designer</SubType></ApplicationDefinition>

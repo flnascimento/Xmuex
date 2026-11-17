@@ -12,6 +12,7 @@ using Windows.Storage.Streams;
 using Windows.UI.Core;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
+using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Media.Imaging;
 
 namespace ShenmueLauncher
@@ -349,6 +350,28 @@ namespace ShenmueLauncher
                 using (var r = new StreamReader(f)) return r.ReadToEnd();
             }
             catch (Exception) { return null; }
+        }
+
+        private async void About_Click(object sender, RoutedEventArgs e)
+        {
+            const string pt =
+                "Este é um projeto pessoal, de fã, feito para rodar no meu próprio Xbox a minha própria cópia de Shenmue I & II, comprada legalmente na Steam. Não há nenhuma pretensão de pirataria ou uso fraudulento.\n\n" +
+                "O jogo é baixado exclusivamente pela sua conta Steam, por login oficial (QR code), sem nenhum bypass dessa verificação. Nenhum arquivo do jogo, da SEGA ou do Shenmue Production Committee está incluído neste software.\n\n" +
+                "A única intenção é compartilhar, de graça, com outros fãs que também já compraram o jogo, uma forma de jogá-lo com a melhor qualidade possível no Xbox com Dev Mode.\n\n" +
+                "Compromisso: se a SEGA, o Shenmue Production Committee ou a Valve entenderem que este projeto infringe algum direito, mesmo que de forma não intencional, peço que entrem em contato — ele será removido ou tornado privado imediatamente, sem discussão.\n\n" +
+                "Sou só um fã que quer jogar Shenmue no Xbox. E estender isso a outros que, assim como eu, têm o jogo original e querem fazer o mesmo. Nada além disso.";
+            const string en =
+                "This is a personal fan project, built to run my own legally purchased Steam copy of Shenmue I & II on my own Xbox. There is no intent of piracy or fraudulent use whatsoever.\n\n" +
+                "The game is downloaded exclusively through your own Steam account, via official login (QR code), with no bypass of that verification. No SEGA / Shenmue Production Committee game file is included in this software.\n\n" +
+                "The sole intent is to share, for free, with other fans who also already own the game, a way to play it at the best possible quality on an Xbox with Dev Mode.\n\n" +
+                "Commitment: if SEGA, the Shenmue Production Committee, or Valve believe this project infringes any right, even unintentionally, please get in touch — it will be taken down or made private immediately, no questions asked.\n\n" +
+                "I'm just a fan who wants to play Shenmue on Xbox. And to extend that to others who, like me, own the original game and want to do the same. Nothing more than that.";
+            var body = new StackPanel { Spacing = 16 };
+            body.Children.Add(new TextBlock { Text = pt, TextWrapping = TextWrapping.Wrap, FontSize = 13, IsTextSelectionEnabled = true });
+            body.Children.Add(new Windows.UI.Xaml.Shapes.Rectangle { Height = 1, Fill = (Brush)Resources["Muted"] });
+            body.Children.Add(new TextBlock { Text = en, TextWrapping = TextWrapping.Wrap, FontSize = 13, IsTextSelectionEnabled = true });
+            var dlg = new ContentDialog { Title = "Sobre este projeto / About this project", Content = new ScrollViewer { Content = body, MaxHeight = 420, Width = 560 }, CloseButtonText = "Fechar / Close" };
+            await dlg.ShowAsync();
         }
 
         private async void Log_Click(object sender, RoutedEventArgs e)
