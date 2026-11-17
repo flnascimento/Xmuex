@@ -27,8 +27,8 @@ Ver [STATUS.md](STATUS.md).
 | `docs/` | Roadmap, deploy no Xbox, mods, legal |
 | `tools/` | `bootstrap.ps1` (setup), `gen_cert.ps1` (certificado de assinatura), `build.ps1` (gera o pacote), `pc_test*.ps1` (testa no PC), `import_mods.py` |
 
-## Compilar e instalar
-Ver `docs/DEPLOY.md`.
+## Instalar
+Baixe o pacote pronto em [Releases](https://github.com/flnascimento/Xmuex/releases) (o `.msix` e as dependências `.appx`) ou compile o seu com `tools/build.ps1` — ver `docs/DEPLOY.md`.
 
 ## Alvo
 Jogo: Shenmue I & II (Steam), appid 758330, depot 758332, build 3291213 (manifest 2953351546760814442).
